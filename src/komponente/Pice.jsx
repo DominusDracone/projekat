@@ -1,16 +1,19 @@
 import React from 'react'
-import Cola from "C:/xampp/htdocs/ITEH/treci_domaci/projekat/src/slike/Coca-Cola.png"
 import { AiOutlinePlusCircle } from "react-icons/ai"
 
-function Pice() {
+function Pice({ pice, onAdd }) {
+    // function onAdd(cena) {
+    //     console.log(cena);
+    // }
     return (
         <div className='Pice'>
-            <img style={{ width: 100, height: 100 }} src={Cola} />
+            <img style={{ width: 200, height: 200 }} src={pice.slika} />
             <div>
-                <p>Naziv</p>
-                <p>Cena</p>
+                <p>{pice.naziv}</p>
+                <p>Cena:</p>
+                <p>{pice.cena}</p>
             </div>
-            <button className='btn'>
+            <button className='btn' onClick={() => onAdd(pice.cena)}>
                 <AiOutlinePlusCircle />
             </button>
         </div>
