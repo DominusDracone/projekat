@@ -1,20 +1,19 @@
 import './App.css';
-import StoBtn from './komponente/StoBtn';
+import BtnHolder from './komponente/BtnHolder';
 import Sto from "./komponente/Sto";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <Sto></Sto>
-      {/* <StoBtn></StoBtn>
-      <StoBtn></StoBtn>
-      <StoBtn></StoBtn>
-      <StoBtn></StoBtn>
-      <StoBtn></StoBtn>
-      <StoBtn></StoBtn>
-      <StoBtn></StoBtn>
-      <StoBtn></StoBtn> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<BtnHolder />} />
+        <Route path="/sto" element={<Sto />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 

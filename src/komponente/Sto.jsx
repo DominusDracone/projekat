@@ -7,7 +7,8 @@ import Mocha from "C:/xampp/htdocs/ITEH/treci_domaci/projekat/src/slike/Mocha.pn
 import Narandza from "C:/xampp/htdocs/ITEH/treci_domaci/projekat/src/slike/sok.jpg"
 import { useState } from 'react'
 
-function Sto() {
+
+function Sto({ brStola }) {
 
     //let iznos = 0;
     const [iznos, setIznos] = useState(0);
@@ -54,7 +55,7 @@ function Sto() {
 
     return (
         <div>
-
+            <h2>Broj stola: {brStola}</h2>
             <SideBar iznos={iznos} onObrisi={onObrisi} onNaplata={onNaplata}></SideBar>
             <Pice pice={pice1} onAdd={onAdd}></Pice>
             <Pice pice={pice2} onAdd={onAdd}></Pice>

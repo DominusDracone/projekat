@@ -1,9 +1,9 @@
 import React from 'react'
 
-function StoBtn() {
+function StoBtn({ Broj }) {
     return (
         <div className='stoBtn'>
-            <a href="">Sto</a>
+            <button className='StoBtn'>{Broj}</button>
         </div>
     )
 }

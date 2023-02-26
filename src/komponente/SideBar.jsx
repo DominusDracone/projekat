@@ -20,7 +20,7 @@ function SideBar({ iznos, onObrisi, onNaplata }) {
         <MdDeleteForever />
       </button>
       <button className='btn' onClick={onNazad}>
-        <IoArrowBackOutline />
+        <a href="/"><IoArrowBackOutline /></a>
       </button>
     </div>
   )
