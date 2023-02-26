@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 
 
-function Sto({ brStola, pocetniIznos }) {
+function Sto({ brStola, pocetniIznos, onNazad }) {
 
     //let iznos = 0;
     const [iznos, setIznos] = useState(pocetniIznos);
@@ -56,8 +56,7 @@ function Sto({ brStola, pocetniIznos }) {
 
     return (
         <div>
-            <h2>Broj stola: {brStola}</h2>
-            <SideBar iznos={iznos} onObrisi={onObrisi} onNaplata={onNaplata}></SideBar>
+            <SideBar iznos={iznos} brStola={brStola} onObrisi={onObrisi} onNaplata={onNaplata} onNazad={onNazad}></SideBar>
             <Pice pice={pice1} onAdd={onAdd}></Pice>
             <Pice pice={pice2} onAdd={onAdd}></Pice>
             <Pice pice={pice3} onAdd={onAdd}></Pice>
