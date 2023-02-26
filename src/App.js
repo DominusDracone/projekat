@@ -9,12 +9,11 @@ function App() {
 
   const [stoIznos, setStoIznos] = useState(0);
   const [stoId, setStoId] = useState(1);
-  const [stolovi, setStolovi] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
+  //const [stolovi, setStolovi] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
 
   function onNazad(iznos, brStola) {
     // console.log(iznos);
     // console.log(brStola);
-
     console.log("nazad");
     console.log(stolovi[brStola - 1]);
   }
