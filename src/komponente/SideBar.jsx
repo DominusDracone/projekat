@@ -2,6 +2,7 @@ import React from 'react'
 import { IoArrowBackOutline } from "react-icons/io5"
 import { MdDeleteForever } from "react-icons/md"
 import { SiCashapp } from "react-icons/si"
+import { Link } from "react-router-dom";
 
 function SideBar({ iznos, onObrisi, onNaplata }) {
 
@@ -20,7 +21,7 @@ function SideBar({ iznos, onObrisi, onNaplata }) {
         <MdDeleteForever />
       </button>
       <button className='btn' onClick={onNazad}>
-        <a href="/"><IoArrowBackOutline /></a>
+        <Link to="/"><IoArrowBackOutline /></Link>
       </button>
     </div>
   )

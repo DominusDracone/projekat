@@ -8,10 +8,11 @@ import Narandza from "C:/xampp/htdocs/ITEH/treci_domaci/projekat/src/slike/sok.j
 import { useState } from 'react'
 
 
-function Sto({ brStola }) {
+
+function Sto({ brStola, pocetniIznos }) {
 
     //let iznos = 0;
-    const [iznos, setIznos] = useState(0);
+    const [iznos, setIznos] = useState(pocetniIznos);
 
     function onNaplata() {
         setIznos(0);

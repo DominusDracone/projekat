@@ -1,9 +1,9 @@
 import React from 'react'
 
-function StoBtn({ Broj }) {
+function StoBtn({ broj, dajBroj }) {
     return (
         <div className='stoBtn'>
-            <button className='StoBtn'>{Broj}</button>
+            <button className='StoBtn' onClick={() => dajBroj(broj)}>{broj}</button>
         </div>
     )
 }
