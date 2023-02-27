@@ -6,6 +6,7 @@ import Sprite from "C:/xampp/htdocs/ITEH/treci_domaci/projekat/src/slike/sprite.
 import Mocha from "C:/xampp/htdocs/ITEH/treci_domaci/projekat/src/slike/Mocha.png"
 import Narandza from "C:/xampp/htdocs/ITEH/treci_domaci/projekat/src/slike/sok.jpg"
 import { useState } from 'react'
+import '../App.css';
 
 
 
@@ -60,12 +61,26 @@ function Sto({ brStola, pocetniIznos, pocetniRacun, onNazad }) {
     };
 
     return (
-        <div>
-            <SideBar iznos={iznos} brStola={brStola} racun={racun} onObrisi={onObrisi} onNaplata={onNaplata} onNazad={onNazad}></SideBar>
-            <Pice pice={pice1} onAdd={onAdd}></Pice>
-            <Pice pice={pice2} onAdd={onAdd}></Pice>
-            <Pice pice={pice3} onAdd={onAdd}></Pice>
-            <Pice pice={pice4} onAdd={onAdd}></Pice>
+        <div className='sto'>
+            <table className='pica'>
+                <tr>
+                    <td>
+                        <Pice pice={pice1} onAdd={onAdd}></Pice>
+                    </td>
+                    <td>
+                        <Pice pice={pice2} onAdd={onAdd}></Pice>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <Pice pice={pice3} onAdd={onAdd}></Pice>
+                    </td>
+                    <td>
+                        <Pice pice={pice4} onAdd={onAdd}></Pice>
+                    </td>
+                </tr>
+            </table>
+            <SideBar className="sideBar" iznos={iznos} brStola={brStola} racun={racun} onObrisi={onObrisi} onNaplata={onNaplata} onNazad={onNazad}></SideBar>
         </div>
     )
 }

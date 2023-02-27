@@ -8,10 +8,12 @@ function SideBar({ iznos, brStola, racun, onObrisi, onNaplata, onNazad }) {
 
   return (
     <div className='SideBar'>
-      <h2>Broj stola: {brStola}</h2>
-      <p>Iznos: </p>
-      <p>{iznos}</p>
-      <h1>{racun}</h1>
+      <div className='text'>
+        <h2>Broj stola: {brStola}</h2>
+        <p>Iznos: </p>
+        <p>{iznos}</p>
+        <h1>{racun}</h1>
+      </div>
       <button className='btn' onClick={onNaplata}>
         <SiCashapp />
       </button>

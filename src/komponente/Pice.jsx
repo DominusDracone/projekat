@@ -8,7 +8,7 @@ function Pice({ pice, onAdd }) {
     return (
         <div className='Pice'>
             <img style={{ width: 200, height: 200 }} src={pice.slika} />
-            <div>
+            <div className='text'>
                 <p>{pice.naziv}</p>
                 <p>Cena:</p>
                 <p>{pice.cena}</p>
