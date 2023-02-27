@@ -9,28 +9,28 @@ import { useState } from 'react'
 
 
 
-function Sto({ brStola, pocetniIznos, onNazad }) {
+function Sto({ brStola, pocetniIznos, pocetniRacun, onNazad }) {
 
     //let iznos = 0;
     const [iznos, setIznos] = useState(pocetniIznos);
-    const [poruka, setPoruka] = useState("");
+    const [racun, setRacun] = useState(pocetniRacun);
 
     function onNaplata() {
         setIznos(0);
         console.log("naplata");
-        setPoruka(">iznos: " + iznos);
+        setRacun("Vaš račun je:" + iznos);
     }
 
     function onAdd(cena, naziv) {
         //console.log(naziv);
-        setPoruka("");
+        setRacun(naziv + "-" + racun);
         setIznos(iznos + cena);
         //console.log(iznos);
     }
 
     function onObrisi() {
         setIznos(0);
-        setPoruka("");
+        setRacun("");
         //console.log(iznos);
     }
 
@@ -61,7 +61,7 @@ function Sto({ brStola, pocetniIznos, onNazad }) {
 
     return (
         <div>
-            <SideBar iznos={iznos} brStola={brStola} poruka={poruka} onObrisi={onObrisi} onNaplata={onNaplata} onNazad={onNazad}></SideBar>
+            <SideBar iznos={iznos} brStola={brStola} racun={racun} onObrisi={onObrisi} onNaplata={onNaplata} onNazad={onNazad}></SideBar>
             <Pice pice={pice1} onAdd={onAdd}></Pice>
             <Pice pice={pice2} onAdd={onAdd}></Pice>
             <Pice pice={pice3} onAdd={onAdd}></Pice>
