@@ -13,8 +13,6 @@ function App() {
   //const stolovi = [0, 0, 0, 0, 0, 0, 0, 0];
 
   function onNazad(iznos, brStola) {
-    // console.log(iznos);
-    // console.log(brStola);
     const pom = stolovi;
     pom[brStola - 1] = iznos;
     setStolovi(pom);
