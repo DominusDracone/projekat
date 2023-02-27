@@ -12,7 +12,6 @@ function App() {
   const [stolovi, setStolovi] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
   const [racuni, setRacuni] = useState(["", "", "", "", "", "", "", ""]);
   const [racun, setRacun] = useState("");
-  //const stolovi = [0, 0, 0, 0, 0, 0, 0, 0];
 
   function onNazad(iznos, brStola, racun) {
     const pom = stolovi;

@@ -12,14 +12,13 @@ import '../App.css';
 
 function Sto({ brStola, pocetniIznos, pocetniRacun, onNazad }) {
 
-    //let iznos = 0;
     const [iznos, setIznos] = useState(pocetniIznos);
     const [racun, setRacun] = useState(pocetniRacun);
 
     function onNaplata() {
         setIznos(0);
         console.log("naplata");
-        setRacun("Vaš račun je:" + iznos);
+        setRacun("Vaš račun je: " + iznos);
     }
 
     function onAdd(cena, naziv) {

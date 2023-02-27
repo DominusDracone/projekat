@@ -2,9 +2,7 @@ import React from 'react'
 import { AiOutlinePlusCircle } from "react-icons/ai"
 
 function Pice({ pice, onAdd }) {
-    // function onAdd(cena) {
-    //     console.log(cena);
-    // }
+
     return (
         <div className='Pice'>
             <img style={{ width: 200, height: 200 }} src={pice.slika} />
