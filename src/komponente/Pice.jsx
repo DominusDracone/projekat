@@ -13,7 +13,7 @@ function Pice({ pice, onAdd }) {
                 <p>Cena:</p>
                 <p>{pice.cena}</p>
             </div>
-            <button className='btn' onClick={() => onAdd(pice.cena)}>
+            <button className='btn' onClick={() => onAdd(pice.cena, pice.naziv)}>
                 <AiOutlinePlusCircle />
             </button>
         </div>

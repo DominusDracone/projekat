@@ -13,20 +13,25 @@ function Sto({ brStola, pocetniIznos, onNazad }) {
 
     //let iznos = 0;
     const [iznos, setIznos] = useState(pocetniIznos);
+    const [poruka, setPoruka] = useState("");
 
     function onNaplata() {
         setIznos(0);
         console.log("naplata");
+        setPoruka(">iznos: " + iznos);
     }
 
-    function onAdd(cena) {
+    function onAdd(cena, naziv) {
+        //console.log(naziv);
+        setPoruka("");
         setIznos(iznos + cena);
-        console.log(iznos);
+        //console.log(iznos);
     }
 
     function onObrisi() {
         setIznos(0);
-        console.log(iznos);
+        setPoruka("");
+        //console.log(iznos);
     }
 
     const pice1 =
@@ -56,7 +61,7 @@ function Sto({ brStola, pocetniIznos, onNazad }) {
 
     return (
         <div>
-            <SideBar iznos={iznos} brStola={brStola} onObrisi={onObrisi} onNaplata={onNaplata} onNazad={onNazad}></SideBar>
+            <SideBar iznos={iznos} brStola={brStola} poruka={poruka} onObrisi={onObrisi} onNaplata={onNaplata} onNazad={onNazad}></SideBar>
             <Pice pice={pice1} onAdd={onAdd}></Pice>
             <Pice pice={pice2} onAdd={onAdd}></Pice>
             <Pice pice={pice3} onAdd={onAdd}></Pice>

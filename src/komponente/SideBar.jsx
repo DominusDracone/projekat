@@ -4,14 +4,14 @@ import { MdDeleteForever } from "react-icons/md"
 import { SiCashapp } from "react-icons/si"
 import { Link } from "react-router-dom";
 
-function SideBar({ iznos, brStola, onObrisi, onNaplata, onNazad }) {
+function SideBar({ iznos, brStola, poruka, onObrisi, onNaplata, onNazad }) {
 
   return (
     <div className='SideBar'>
-      <p>SideBar</p>
       <h2>Broj stola: {brStola}</h2>
       <p>Iznos: </p>
       <p>{iznos}</p>
+      <h1>{poruka}</h1>
       <button className='btn' onClick={onNaplata}>
         <SiCashapp />
       </button>
